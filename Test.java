@@ -7,6 +7,7 @@ public class Test{
         listWord.setWord(word);
         listWord.setWord(word);
         listWord.setWord(word);
+	listWord.setWord(word);
         listWord.showAllWords();
     }
 }
