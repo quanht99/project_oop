@@ -1,30 +1,37 @@
-import controller.controller;
-
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class main {
-    public static void main(String[] args) throws SQLException {
-        while(true){
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Nhập từ bạn muốn tra:");
-            String test = sc.nextLine();
-            String detail = controller.findWord(test);
-            //String[] detail = controller.suggestionWord(test);
-            //String[] result = detail.split(";");
-//            for(int i=0 ; i<detail.length; i++){
-//                System.out.println(detail[i]);
-//            }
+import static controller.controller.findWord;
 
-            if(detail!=null && !detail.equals("")){
-                String[] result = detail.split(";");
-                System.out.println(test + ":");
-                for (String aResult : result) {
-                    System.out.println("          +" + aResult);
-                }
+public class main {
+    public static void main(String args[]) throws SQLException {
+        Scanner sc = new Scanner(System.in);
+        while(true) {
+            System.out.print("Seach: ");
+            String text = sc.nextLine();
+            String detail = findWord(text);
+            if (!detail.equals("")) {
+                System.out.println(text + ": " + detail);
+            } else {
+                System.out.println("Not found");
             }
-            else{
-                System.out.println("Từ bạn nhập không có trong từ điển");
+            int check = 0;
+            Scanner scc;
+            do {
+                scc = new Scanner(System.in);
+                System.out.println("Continue (y || n) ?");
+                String yOrn = scc.nextLine();
+                yOrn = yOrn.toLowerCase();
+                if (yOrn.equals("y")) {
+                    check = 1;
+                } else if (yOrn.equals("n")) {
+                    check = 2;
+                } else {
+                    check = 0;
+                }
+            } while (check == 0);
+            if (check == 2) {
+                break;
             }
         }
     }
