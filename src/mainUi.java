@@ -16,8 +16,7 @@ public class mainUi extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("JavaFx/giaoDienDictionary.fxml"));
         primaryStage.setTitle("Dictionary");
         primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root, 700, 500));
-
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
     }
     public static void main(String[] args) {

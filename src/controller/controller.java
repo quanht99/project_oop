@@ -44,7 +44,6 @@ public class controller {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, text + "%");
             pstm.setInt(2, 50);
-            System.out.println(sql);
 
             ResultSet rs = pstm.executeQuery();
             int i = 0;
