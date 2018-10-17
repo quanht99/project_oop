@@ -6,7 +6,7 @@ import static controller.controller.addWordToDatabase;
 import static controller.controller.deletaWordFromDatabase;
 import static controller.controller.findWord;
 
-public class main {
+public class mainClass {
     public static void main(String args[]) throws SQLException {
         Scanner sc = new Scanner(System.in);
         while(true) {

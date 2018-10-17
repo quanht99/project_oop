@@ -9,7 +9,9 @@ public class connectWithDatabase {
     public static Connection getConnection(){
         // ten driver + url db
         final String JDBC_DRIVER = "org.sqlite.JDBC";
+
         final String url = "jdbc:sqlite:C:\\Users\\Black\\project_oop\\src\\dictionaryE_V.db";
+        
         try{
             Class.forName(JDBC_DRIVER);
 
