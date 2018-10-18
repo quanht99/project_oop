@@ -10,8 +10,8 @@ public class connectWithDatabase {
         // ten driver + url db
         final String JDBC_DRIVER = "org.sqlite.JDBC";
 
-        final String url = "jdbc:sqlite:src\\dictionaryE_V.db";
-        
+        final String url = "jdbc:sqlite:src/dictionaryE_V.db";
+
         try{
             Class.forName(JDBC_DRIVER);
 
