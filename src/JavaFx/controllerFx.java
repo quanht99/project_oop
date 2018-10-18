@@ -160,4 +160,9 @@ public class controllerFx implements Initializable {
         textToSpeech(textListen);
     }
 
+    public void handleButtonActionExit()
+    {
+        System.exit(0);
+    }
+
 }
