@@ -150,5 +150,14 @@ public class controllerFx implements Initializable {
         }
 
     }
+    @FXML
+    public void handleButtonActionListen(ActionEvent event)
+    {
+        String textListen = labelOutput.getText();
+        System.out.println("ok");
+        System.out.println(textListen);
+
+        textToSpeech(textListen);
+    }
 
 }

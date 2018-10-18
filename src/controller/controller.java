@@ -171,10 +171,7 @@ public class controller {
             synthesizer.allocate();
             synthesizer.resume();
             synthesizer.speakPlainText(text, null);
-            synthesizer.waitEngineState(Synthesizer.QUEUE_EMPTY);
 
-            // Deallocate the Synthesizer.
-            synthesizer.deallocate();
         }
 
         catch (Exception e)
