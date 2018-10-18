@@ -150,5 +150,9 @@ public class controllerFx implements Initializable {
         }
 
     }
-
+    @FXML
+    public void handleButtonActionExit()
+    {
+        System.exit(0);
+    }
 }
