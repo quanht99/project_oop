@@ -3,46 +3,63 @@ package JavaFx;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 
+import java.sql.SQLException;
 import java.util.Optional;
 
 import static controller.controller.deletaWordFromDatabase;
+import static controller.controller.findWord;
 
 public class deleteController {
     @FXML
     private TextField textFieldXoa = new TextField();
 
     @FXML
-    public void handleButtonAction1(ActionEvent e)
-    {
+    public void handleButtonAction1(ActionEvent e) throws SQLException {
 
-//
-//        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-//        alert.setTitle("Confirmation");
-//        alert.setHeaderText("CONFIRMATION");
-//        alert.setContentText("Do you want to delete it?");
-//        alert.show();
-//
-//        Optional<ButtonType> result = alert.showAndWait();
-//
-//        if(result.get() == ButtonType.OK) {
+        String textEqualInput = textFieldXoa.getText();
+        String textEqualOutput = findWord(textEqualInput);
 
-        String text = textFieldXoa.getText();
-        deletaWordFromDatabase(text);
-        textFieldXoa.setText("");
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information");
-        alert.setHeaderText("Done");
-        alert.setContentText("Delete successfully");
-        alert.show();
-        //}
+        if(textEqualOutput.equals(""))
+        {
+            Alert alert1 = new Alert(Alert.AlertType.ERROR);
+            alert1.setTitle("Error");
+            alert1.setHeaderText("ERROR");
+            alert1.setContentText("Not found this word in Dictionary!");
+            alert1.show();
+        }
+        else {
+            Alert alert2 = new Alert(Alert.AlertType.NONE);
+
+            ButtonType buttonTypeYes = new ButtonType("Yes");
+            ButtonType buttonTypeCancel = new ButtonType("Cancel");
+
+            alert2.getButtonTypes().addAll(buttonTypeYes,buttonTypeCancel);
+            alert2.setTitle("Confirmation");
+            alert2.setHeaderText("CONFIRMATION");
+            alert2.setContentText("Do you want to delete it?");
+
+            Optional<ButtonType> result  = alert2.showAndWait();
+            alert2.show();
+
+            if (result.get().getText() == "Yes") {
+                alert2.close();
+                String text = textFieldXoa.getText();
+                deletaWordFromDatabase(text);
+                textFieldXoa.setText("");
+
+                Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+                alert3.setTitle("Information");
+                alert3.setHeaderText("Done");
+                alert3.setContentText("Deleted word successfully");
+                alert3.show();
+            } else {
+                alert2.close();
+            }
+        }
+
     }
 }
-/*
-các trường hơp :
-1. k có tu trung khop de xoa
-2. hoi có muốn xóa từ không
-3. thông báo xóa từ thành công
- */

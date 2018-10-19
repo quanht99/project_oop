@@ -24,14 +24,32 @@ public class editWordController {
 
     @FXML
     public void handleButtonFind(ActionEvent event) throws SQLException {
-        String textFind = textFieldEdit.getText();
-        htmlEditorEdit.setHtmlText(findWord(textFind));
-
+        String textFindInput = textFieldEdit.getText();
+        String textFindOutput = findWord(textFindInput);
+        if(textFindOutput.equals(""))
+        {
+            Alert alert1 = new Alert(Alert.AlertType.ERROR);
+            alert1.setTitle("Error");
+            alert1.setHeaderText("ERROR");
+            alert1.setContentText("Not found this word in Dictionary!");
+            alert1.show();
+        }
+        else {
+            htmlEditorEdit.setHtmlText(findWord(textFindInput));
+        }
     }
     @FXML
     public void handleButtonEdit(ActionEvent e)
     {
         editDetail(textFieldEdit.getText(), htmlEditorEdit.getHtmlText());
+        textFieldEdit.setText("");
+        htmlEditorEdit.setHtmlText("");
+
+        Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+        alert3.setTitle("Information");
+        alert3.setHeaderText("Done");
+        alert3.setContentText("Edited word successfully");
+        alert3.show();
     }
 
 
