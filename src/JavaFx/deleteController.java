@@ -32,7 +32,7 @@ public class deleteController {
             alert1.show();
         }
         else {
-            Alert alert2 = new Alert(Alert.AlertType.NONE);
+            Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
 
             ButtonType buttonTypeYes = new ButtonType("Yes");
             ButtonType buttonTypeCancel = new ButtonType("Cancel");
@@ -50,7 +50,7 @@ public class deleteController {
                 deletaWordFromDatabase(text);
                 textFieldXoa.setText("");
 
-                Alert alert3 = new Alert(Alert.AlertType.NONE);
+                Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
                 alert3.setTitle("Information");
                 alert3.setContentText("Deleted word successfully");
                 alert3.show();
