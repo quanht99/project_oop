@@ -36,15 +36,12 @@
                   <Image url="@vocabularyMain.png" />
                </image>
             </ImageView>
-            <Button layoutX="280.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #6DCFF6;">
-               <graphic>
-                  <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@magnifier.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            <Button layoutX="281.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #6DCFF6;" />
+            <ImageView fitHeight="39.0" fitWidth="31.0" layoutX="303.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@magnifier.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <MenuBar layoutX="-9.0" prefHeight="32.0" prefWidth="818.0">
