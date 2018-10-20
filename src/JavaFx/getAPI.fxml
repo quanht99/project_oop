@@ -12,17 +12,17 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.getAPIController">
    <children>
-      <TextField layoutX="3.0" layoutY="59.0" prefHeight="30.0" prefWidth="243.0">
+      <TextField fx:id="textFieldGetWordInput" layoutX="3.0" layoutY="59.0" onKeyPressed="#KeyPress" prefHeight="30.0" prefWidth="243.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="246.0" layoutY="59.0" mnemonicParsing="false" text="Search">
+      <Button layoutX="246.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleButtonActionSearchAPI" text="Search">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TextArea layoutY="95.0" prefHeight="305.0" prefWidth="602.0">
+      <TextArea fx:id="textAreaGetWordOutput" layoutY="95.0" prefHeight="305.0" prefWidth="602.0">
          <font>
             <Font size="14.0" />
          </font>

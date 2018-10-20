@@ -89,7 +89,7 @@ public class controller {
             }
             if(!abc.equals("")){
                 System.out.println("Từ này đã có trong database");
-                return "";
+                return "false";
             }
             pstm = conn.prepareStatement(sql);
             pstm.setString(1, word);
@@ -151,6 +151,7 @@ public class controller {
             pstm.setString(1, detail);
             pstm.setString(2, word);
             pstm.executeUpdate();
+            return "true";
         } catch (SQLException e) {
             e.printStackTrace();
         }
