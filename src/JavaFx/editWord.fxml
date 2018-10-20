@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -7,32 +13,46 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane prefHeight="512.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.editWordController">
+<AnchorPane prefHeight="574.0" prefWidth="668.0" style="-fx-background-color: #3064B7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.editWordController">
    <children>
-      <HTMLEditor fx:id="htmlEditorEdit" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="1.0" layoutY="112.0" prefHeight="373.0" prefWidth="608.0" />
-      <Button layoutX="347.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="37.0" prefWidth="65.0" text="Find">
+      <HTMLEditor fx:id="htmlEditorEdit" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="106.0" prefHeight="408.0" prefWidth="668.0" style="-fx-background-color: blue;" />
+      <Button layoutX="377.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="39.0" prefWidth="68.0" style="-fx-background-color: #6DCFF6;">
          <font>
             <Font size="16.0" />
-         </font></Button>
-      <Label layoutX="20.0" layoutY="28.0" prefHeight="25.0" prefWidth="105.0" text="Word Target">
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@magnifier.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="14.0" layoutY="28.0" prefHeight="25.0" prefWidth="91.0" text="Word Target" textFill="#fffdfd">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="textFieldEdit" layoutX="135.0" layoutY="22.0" prefHeight="37.0" prefWidth="212.0">
+      <TextField fx:id="textFieldEdit" layoutX="115.0" layoutY="22.0" onKeyPressed="#KeyPress" prefHeight="37.0" prefWidth="262.0" style="-fx-border-color: blue;">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <Label layoutX="20.0" layoutY="75.0" text="Word Explain">
+      <Label layoutX="13.0" layoutY="73.0" text="Word Explain" textFill="#fffafa">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button layoutX="544.0" layoutY="485.0" mnemonicParsing="false" onAction="#handleButtonEdit" prefHeight="31.0" prefWidth="65.0" text="Edit">
+      <Button layoutX="574.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleButtonEdit" prefHeight="40.0" prefWidth="81.0" style="-fx-background-color: #6DCFF6;" text="Save">
          <font>
-            <Font size="16.0" />
+            <Font size="14.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@save.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
    </children>
 </AnchorPane>

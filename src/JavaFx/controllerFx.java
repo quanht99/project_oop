@@ -19,6 +19,7 @@ import javafx.stage.StageStyle;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import static controller.controller.*;
@@ -32,6 +33,8 @@ public class controllerFx implements Initializable {
     @FXML private WebEngine webEngine;
     @FXML private ListView<String> listView;
 
+
+
     public void handleButtonFind() throws SQLException {
 
         String wordInput = textFieldInput.getText();
@@ -39,16 +42,60 @@ public class controllerFx implements Initializable {
 
         if(wordExplain.equals(""))
         {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("Not found this word");
+            Alert alert = new Alert(Alert.AlertType.NONE);
+
+            ButtonType buttonTypeYesAPI = new ButtonType("Yes");
+            ButtonType buttonTypeNoAPI = new ButtonType("No");
+
+            alert.getButtonTypes().addAll(buttonTypeYesAPI,buttonTypeNoAPI);
+
             alert.setTitle("Information");
+            alert.setContentText("Not found this word\n\nDo you want to use API google to search new word?");
             alert.setHeaderText("Notification");
+
+            Optional<ButtonType> result = alert.showAndWait();
+
             alert.show();
+            switch (result.get().getText())
+            {
+                case "Yes":
+                {
+                    handleButtonActionAPI();
+                    alert.close();
+                    break;
+                }
+                case "No":
+                {
+                    alert.close();
+                    break;
+                }
+            }
+
         }
         else
         {
             labelOutput.setText(wordInput);
             webEngine.loadContent(wordExplain);
+        }
+
+    }
+    public void handleButtonActionAPI()
+    {
+        try
+        {
+            FXMLLoader fxmlAPI = new FXMLLoader((getClass().getResource("getAPI.fxml")));
+            Parent rootAPI = (Parent) fxmlAPI.load();
+            Stage stageAdd = new Stage();
+            stageAdd.initStyle(StageStyle.UTILITY);
+
+            stageAdd.hide();
+            stageAdd.setTitle("Search new word by API google");
+            stageAdd.setScene(new Scene(rootAPI));
+            stageAdd.show();
+        }
+        catch (Exception ex)
+        {
+            System.out.println(ex);
         }
 
     }
@@ -78,6 +125,7 @@ public class controllerFx implements Initializable {
     }
 
     public void actionEvent(MouseEvent mouseEvent) {
+
     }
 
     @Override
@@ -151,7 +199,7 @@ public class controllerFx implements Initializable {
 
     }
     @FXML
-    public void handleButtonActionListen(ActionEvent event)
+    public void handleButtonActionListen()
     {
         String textListen = labelOutput.getText();
         System.out.println("ok");
@@ -164,5 +212,6 @@ public class controllerFx implements Initializable {
     {
         System.exit(0);
     }
+
 
 }
