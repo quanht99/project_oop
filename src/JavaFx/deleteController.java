@@ -39,7 +39,6 @@ public class deleteController {
 
             alert2.getButtonTypes().addAll(buttonTypeYes,buttonTypeCancel);
             alert2.setTitle("Confirmation");
-            alert2.setHeaderText("CONFIRMATION");
             alert2.setContentText("Do you want to delete it?");
 
             Optional<ButtonType> result  = alert2.showAndWait();
@@ -51,9 +50,8 @@ public class deleteController {
                 deletaWordFromDatabase(text);
                 textFieldXoa.setText("");
 
-                Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+                Alert alert3 = new Alert(Alert.AlertType.NONE);
                 alert3.setTitle("Information");
-                alert3.setHeaderText("Done");
                 alert3.setContentText("Deleted word successfully");
                 alert3.show();
                 System.out.println("da xoa");

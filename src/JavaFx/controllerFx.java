@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -121,6 +122,11 @@ public class controllerFx implements Initializable {
         String text;
         text = listView.getSelectionModel().getSelectedItem();
         textFieldInput.setText(text);
+        handleButtonFind();
+        String word[] = {""};
+        word = suggestionWord(text);
+        ObservableList<String> data = FXCollections.observableArrayList(word);
+        listView.setItems(data);
 
     }
 

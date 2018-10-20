@@ -25,9 +25,9 @@
 
       <ListView fx:id="listView" editable="true" layoutY="148.0" onMouseClicked="#displayMouse" prefHeight="461.0" prefWidth="350.0" style="-fx-border-color: white; -fx-fixed-cell-size: 35px; -fx-background-color: white;" />
       <WebView fx:id="webView" layoutX="371.0" layoutY="193.0" prefHeight="411.0" prefWidth="435.0" />
-      <AnchorPane layoutY="29.0" prefHeight="122.0" prefWidth="809.0" style="-fx-background-color: #3064B7;">
+      <AnchorPane layoutY="24.0" prefHeight="127.0" prefWidth="809.0" style="-fx-background-color: #3064B7;">
          <children>
-            <TextField fx:id="textFieldInput" layoutX="2.0" layoutY="68.0" onKeyPressed="#KeyPress" onKeyReleased="#showList" prefHeight="39.0" prefWidth="279.0" promptText="Search" style="-fx-border-color: blue;">
+            <TextField fx:id="textFieldInput" layoutX="2.0" layoutY="68.0" onKeyPressed="#KeyPress" onKeyReleased="#showList" prefHeight="39.0" prefWidth="350.0" promptText="Search" style="-fx-border-color: blue;">
                <font>
                   <Font size="16.0" />
                </font>
@@ -42,18 +42,14 @@
                   <Image url="@vocabularyMain.png" />
                </image>
             </ImageView>
-            <Button layoutX="280.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #6DCFF6;">
-               <graphic>
-                  <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@magnifier.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="310.0" layoutY="68.0" onMouseClicked="#handleButtonFind" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@unnamed.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <MenuBar prefHeight="29.0" prefWidth="809.0">
+      <MenuBar layoutX="-8.0" prefHeight="25.0" prefWidth="817.0">
         <menus>
           <Menu mnemonicParsing="false" text="Menu">
             <items>
@@ -63,9 +59,6 @@
                         <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                      </accelerator></MenuItem>
             </items>
-               <accelerator>
-                  <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-               </accelerator>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
             <items>
@@ -86,9 +79,9 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="761.0" layoutY="154.0" onMouseClicked="#handleButtonActionListen" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="labelListen" fitHeight="39.0" fitWidth="52.0" layoutX="761.0" layoutY="154.0" onMouseClicked="#handleButtonActionListen" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@sound.png" />
+            <Image url="@microphone.png" />
          </image>
       </ImageView>
 
