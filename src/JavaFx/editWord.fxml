@@ -15,24 +15,13 @@
 
 <AnchorPane prefHeight="574.0" prefWidth="668.0" style="-fx-background-color: #3064B7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.editWordController">
    <children>
-      <HTMLEditor fx:id="htmlEditorEdit" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="106.0" prefHeight="408.0" prefWidth="668.0" style="-fx-background-color: blue;" />
-      <Button layoutX="377.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="39.0" prefWidth="68.0" style="-fx-background-color: #6DCFF6;">
-         <font>
-            <Font size="16.0" />
-         </font>
-         <graphic>
-            <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@magnifier.png" />
-               </image>
-            </ImageView>
-         </graphic></Button>
+      <HTMLEditor fx:id="htmlEditorEdit" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="109.0" prefHeight="408.0" prefWidth="668.0" style="-fx-background-color: blue;" />
       <Label layoutX="14.0" layoutY="28.0" prefHeight="25.0" prefWidth="91.0" text="Word Target" textFill="#fffdfd">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="textFieldEdit" layoutX="115.0" layoutY="22.0" onKeyPressed="#KeyPress" prefHeight="37.0" prefWidth="262.0" style="-fx-border-color: blue;">
+      <TextField fx:id="textFieldEdit" layoutX="115.0" layoutY="22.0" onKeyPressed="#KeyPress" prefHeight="39.0" prefWidth="286.0" style="-fx-border-color: blue;">
          <font>
             <Font size="16.0" />
          </font>
@@ -54,5 +43,6 @@
             </ImageView>
          </graphic>
       </Button>
+      <ImageView fitHeight="39.0" fitWidth="42.0" layoutX="359.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

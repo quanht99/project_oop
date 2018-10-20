@@ -7,13 +7,17 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
+/*
+en, vi
+ */
 public class googleAPI {
     public static String getAPI(String langFrom, String langTo, String word) throws JSONException {
         if (word.length() < 1) {
             return "";
         }
+        System.out.println(word);
         String text = word.replace(" ", "%20");
+        System.out.println(text);
         StringBuilder content = new StringBuilder();
         try {
             String urlText = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + langFrom

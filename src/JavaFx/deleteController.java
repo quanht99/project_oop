@@ -32,7 +32,7 @@ public class deleteController {
             alert1.show();
         }
         else {
-            Alert alert2 = new Alert(Alert.AlertType.NONE);
+            Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
 
             ButtonType buttonTypeYes = new ButtonType("Yes");
             ButtonType buttonTypeCancel = new ButtonType("Cancel");
