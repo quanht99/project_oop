@@ -1,5 +1,6 @@
 package controller;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.BufferedReader;
@@ -28,13 +29,22 @@ public class googleAPI {
             while ((line = bufferedReader.readLine()) != null) {
                 content.append(line + "\n");
             }
+
+            System.out.println(content.toString());
             bufferedReader.close();
         } catch (Exception e) {
             //Alertapp.ErrorNetwork();
             System.out.println(e);
             return "";
         }
-        return content.toString().split("\"", -1)[1];
+        JSONArray json = new JSONArray(content.toString());
+        JSONArray jsonResult = (JSONArray) json.get(0);
+        String result = "";
+        for (int i = 0; i < jsonResult.length(); i++) {
+            JSONArray arrayBlock = (JSONArray) jsonResult.get(i);
+            result += arrayBlock.get(0).toString();
+        }
+        return result;
     }
 }
 
