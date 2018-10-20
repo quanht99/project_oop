@@ -12,12 +12,12 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3064B7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.getAPIController">
    <children>
-      <TextField fx:id="textFieldGetWordInput" layoutX="3.0" layoutY="59.0" onKeyPressed="#KeyPress" prefHeight="41.0" prefWidth="368.0" promptText="Search" style="-fx-border-color: blue;">
+      <TextField fx:id="textFieldGetWordInput" layoutX="3.0" layoutY="59.0" onKeyPressed="#KeyPress" prefHeight="41.0" prefWidth="312.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <TextArea fx:id="textAreaGetWordOutput" layoutY="111.0" prefHeight="289.0" prefWidth="602.0" style="-fx-border-color: blue;">
+      <TextArea fx:id="textAreaGetWordOutput" layoutY="111.0" prefHeight="289.0" prefWidth="602.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -32,7 +32,10 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="95.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleButtonActionChange" prefHeight="32.0" prefWidth="47.0">
+      <Button layoutX="91.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleButtonActionChange" prefHeight="37.0" prefWidth="51.0">
+         <font>
+            <Font size="16.0" />
+         </font>
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                <image>

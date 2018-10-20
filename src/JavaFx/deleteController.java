@@ -50,7 +50,7 @@ public class deleteController {
                 deletaWordFromDatabase(text);
                 textFieldXoa.setText("");
 
-                Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+                Alert alert3 = new Alert(Alert.AlertType.NONE);
                 alert3.setTitle("Information");
                 alert3.setContentText("Deleted word successfully");
                 alert3.show();
