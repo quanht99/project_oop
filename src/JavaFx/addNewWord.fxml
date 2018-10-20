@@ -27,28 +27,9 @@
          </font>
       </Label>
       <HTMLEditor fx:id="htmlEditorWordExplain" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="-2.0" layoutY="102.0" prefHeight="360.0" prefWidth="706.0" style="-fx-background-color: blue;" />
-      <Button alignment="CENTER" layoutX="601.0" layoutY="467.0" mnemonicParsing="false" onAction="#handleButtonActionOk" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #6DCFF6;" text="Save">
-         <graphic>
-            <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@save.png" />
-               </image>
-            </ImageView>
-         </graphic>
+      <Button alignment="CENTER" layoutX="611.0" layoutY="469.0" mnemonicParsing="false" onAction="#handleButtonActionOk" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #6DCFF6;" text="Save">
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button layoutX="513.0" layoutY="467.0" mnemonicParsing="false" onAction="#handleButtonActionNew" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: #6DCFF6;" text="New">
-         <graphic>
-            <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@fontsize.png" />
-               </image>
-            </ImageView>
-         </graphic>
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

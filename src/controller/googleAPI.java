@@ -29,8 +29,6 @@ public class googleAPI {
             while ((line = bufferedReader.readLine()) != null) {
                 content.append(line + "\n");
             }
-
-            System.out.println(content.toString());
             bufferedReader.close();
         } catch (Exception e) {
             //Alertapp.ErrorNetwork();

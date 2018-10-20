@@ -28,44 +28,47 @@ public class addNewWordController {
         String wordExplain = htmlEditorWordExplain.getHtmlText();
         String wordTargetOuput = findWord(wordTarget);
 
-        if(wordTargetOuput.equals(false)) {
+        if(wordTargetOuput.equals("")) {
             /*
             hoi
              */
             if (textFieldWordTarget.getText().equals("") || htmlEditorWordExplain.getHtmlText().equals("")) {
-                Alert alert1 = new Alert(Alert.AlertType.ERROR);
+                Alert alert1 = new Alert(Alert.AlertType.NONE);
                 alert1.setTitle("Error");
-                alert1.setHeaderText("ERROR");
-                alert1.setContentText("NULL");
+                alert1.setContentText("ERROR");
                 alert1.show();
+
+                textFieldWordTarget.setText("");
+                htmlEditorWordExplain.setHtmlText("");
+
                 System.out.println("xoa");
             }
             else {
                 addWordToDatabase(wordTarget, wordExplain);
                 System.out.println("da them");
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                Alert alert = new Alert(Alert.AlertType.NONE);
                 alert.setContentText("Added word successfully");
                 alert.setTitle("Information");
-                alert.setHeaderText("Done");
                 alert.show();
+
+                textFieldWordTarget.setText("");
+                htmlEditorWordExplain.setHtmlText("");
             }
         }
         else
         {
             System.out.println(htmlEditorWordExplain.getHtmlText());
-            Alert alert1 = new Alert(Alert.AlertType.ERROR);
+            Alert alert1 = new Alert(Alert.AlertType.NONE);
             alert1.setTitle("Error");
-            alert1.setHeaderText("ERROR");
             alert1.setContentText("This word is in Dictionary!");
             alert1.show();
+
+            textFieldWordTarget.setText("");
+            htmlEditorWordExplain.setHtmlText("");
+
             System.out.println("K tim thay");
 
         }
     }
-    @FXML
-    public void handleButtonActionNew(ActionEvent event)
-    {
-        textFieldWordTarget.setText("");
-        htmlEditorWordExplain.setHtmlText("");
-    }
+
 }

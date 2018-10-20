@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.deleteController">
+<AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #3064B7;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.deleteController">
    <children>
       <Button layoutX="220.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleButtonAction1" text="Delete">
          <font>
@@ -19,9 +18,9 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <Label layoutX="137.0" layoutY="70.0" text="Enter word which you want to delete">
+      <Label alignment="CENTER" layoutX="137.0" layoutY="70.0" text="Enter word which you want to delete" textFill="#fcfcfc">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font>
       </Label>
    </children>
