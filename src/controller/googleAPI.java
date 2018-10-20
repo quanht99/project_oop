@@ -8,11 +8,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class googleAPI {
-
-    public static String getAPI(String langFrom, String langTo, String text) throws JSONException {
-        if (text.length() < 1) {
+    public static String getAPI(String langFrom, String langTo, String word) throws JSONException {
+        if (word.length() < 1) {
             return "";
         }
+        String text = word.replace(" ", "%20");
         StringBuilder content = new StringBuilder();
         try {
             String urlText = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + langFrom
