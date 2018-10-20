@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
@@ -19,40 +20,40 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane onDragDetected="#actionEvent" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.controllerFx">
+<AnchorPane onDragDetected="#actionEvent" prefHeight="600.0" prefWidth="806.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.controllerFx">
    <children>
 
-      <ListView fx:id="listView" layoutY="111.0" onMouseClicked="#displayMouse" prefHeight="493.0" prefWidth="350.0" style="-fx-border-color: white;" />
-      <WebView fx:id="webView" layoutX="350.0" layoutY="153.0" prefHeight="451.0" prefWidth="456.0" />
-      <AnchorPane layoutY="26.0" prefHeight="84.0" prefWidth="806.0" style="-fx-background-color: #007CDB;">
+      <ListView fx:id="listView" editable="true" layoutY="148.0" onMouseClicked="#displayMouse" prefHeight="461.0" prefWidth="350.0" style="-fx-border-color: white; -fx-fixed-cell-size: 35px; -fx-background-color: white;" />
+      <WebView fx:id="webView" layoutX="371.0" layoutY="193.0" prefHeight="411.0" prefWidth="435.0" />
+      <AnchorPane layoutY="29.0" prefHeight="122.0" prefWidth="809.0" style="-fx-background-color: #3064B7;">
          <children>
-            <TextField fx:id="textFieldInput" layoutX="9.0" layoutY="26.0" onKeyPressed="#KeyPress" onKeyReleased="#showList" prefHeight="32.0" prefWidth="263.0" promptText="Search" style="-fx-border-color: blue;">
+            <TextField fx:id="textFieldInput" layoutX="2.0" layoutY="68.0" onKeyPressed="#KeyPress" onKeyReleased="#showList" prefHeight="39.0" prefWidth="279.0" promptText="Search" style="-fx-border-color: blue;">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <Label layoutX="480.0" layoutY="14.0" text="Dictionary" textFill="#110536">
+            <Label layoutX="501.0" layoutY="12.0" text="Dictionary" textFill="#051e0e">
                <font>
                   <Font name="Yu Mincho Demibold" size="43.0" />
                </font>
             </Label>
-            <ImageView fitHeight="63.0" fitWidth="60.0" layoutX="420.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="63.0" fitWidth="60.0" layoutX="441.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@vocabularyMain.png" />
                </image>
             </ImageView>
-            <Button layoutX="272.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="29.0" prefWidth="52.0">
+            <Button layoutX="280.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: #6DCFF6;">
                <graphic>
-                  <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="31.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@searchFind.png" />
+                        <Image url="@magnifier.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
          </children>
       </AnchorPane>
-      <MenuBar prefHeight="29.0" prefWidth="806.0">
+      <MenuBar prefHeight="29.0" prefWidth="809.0">
         <menus>
           <Menu mnemonicParsing="false" text="Menu">
             <items>
@@ -80,12 +81,12 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Label fx:id="labelOutput" layoutX="350.0" layoutY="111.0" prefHeight="42.0" prefWidth="403.0" style="-fx-background-color: white;">
+      <Label fx:id="labelOutput" layoutX="358.0" layoutY="154.0" prefHeight="39.0" prefWidth="403.0" style="-fx-background-color: white;">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="760.0" layoutY="113.0" onMouseClicked="#handleButtonActionListen" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="39.0" fitWidth="52.0" layoutX="761.0" layoutY="154.0" onMouseClicked="#handleButtonActionListen" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sound.png" />
          </image>

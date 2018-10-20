@@ -23,7 +23,7 @@ public class deleteController {
         String textEqualInput = textFieldXoa.getText();
         String textEqualOutput = findWord(textEqualInput);
 
-        if(textEqualOutput.equals(""))
+        if(textEqualOutput.equals("") || textEqualInput.equals(""))
         {
             Alert alert1 = new Alert(Alert.AlertType.ERROR);
             alert1.setTitle("Error");
@@ -56,6 +56,7 @@ public class deleteController {
                 alert3.setHeaderText("Done");
                 alert3.setContentText("Deleted word successfully");
                 alert3.show();
+                System.out.println("da xoa");
             } else {
                 alert2.close();
             }
