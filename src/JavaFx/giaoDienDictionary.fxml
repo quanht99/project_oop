@@ -28,12 +28,12 @@
       <WebView fx:id="webView" layoutX="371.0" layoutY="193.0" prefHeight="411.0" prefWidth="435.0" />
       <AnchorPane layoutY="24.0" prefHeight="127.0" prefWidth="809.0" style="-fx-background-color: #3064B7;">
          <children>
-            <TextField fx:id="textFieldInput" layoutX="2.0" layoutY="68.0" onKeyPressed="#KeyPress" onKeyReleased="#showList" prefHeight="39.0" prefWidth="350.0" promptText="Search" style="-fx-border-color: blue;">
+            <TextField fx:id="textFieldInput" layoutX="2.0" layoutY="68.0" onKeyPressed="#KeyPress" onKeyReleased="#showList" prefHeight="39.0" prefWidth="305.0" promptText="Search" style="-fx-border-color: blue;">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <Label layoutX="501.0" layoutY="12.0" text="Dictionary" textFill="#051e0e">
+            <Label layoutX="501.0" layoutY="12.0" text="Dictionary" textFill="#0c0d0d">
                <font>
                   <Font name="Yu Mincho Demibold" size="43.0" />
                </font>
@@ -43,13 +43,15 @@
                   <Image url="@vocabularyMain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="39.0" fitWidth="31.0" layoutX="303.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
-            </ImageView>
-            <ImageView fitHeight="39.0" fitWidth="46.0" layoutX="315.0" layoutY="68.0" onMouseClicked="#handleButtonFind" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@magnifying-glass.png" />
-               </image>
-            </ImageView>
+            <Button layoutX="307.0" layoutY="68.0" mnemonicParsing="false" onAction="#handleButtonFind" prefHeight="32.0" prefWidth="47.0">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="31.0" onMouseClicked="#handleButtonFind" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@magnifying-glass.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
       <MenuBar layoutX="-9.0" prefHeight="32.0" prefWidth="818.0">

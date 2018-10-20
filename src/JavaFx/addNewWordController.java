@@ -24,49 +24,34 @@ public class addNewWordController {
 
     @FXML
     public void handleButtonActionOk(ActionEvent e) throws SQLException {
+
         String wordTarget = textFieldWordTarget.getText();
         String wordExplain = htmlEditorWordExplain.getHtmlText();
-        String wordTargetOuput = findWord(wordTarget);
 
-        if(wordTargetOuput.equals("")) {
-            /*
-            hoi
-             */
-            if (textFieldWordTarget.getText().equals("") || htmlEditorWordExplain.getHtmlText().equals("")) {
-                Alert alert1 = new Alert(Alert.AlertType.NONE);
-                alert1.setTitle("Error");
-                alert1.setContentText("ERROR");
-                alert1.show();
+        String wordExplainOuput = findWord(wordTarget);
+        if(wordExplainOuput.equals("")) {
 
-                textFieldWordTarget.setText("");
-                htmlEditorWordExplain.setHtmlText("");
+            addWordToDatabase(wordTarget, wordExplain);
 
-                System.out.println("xoa");
-            }
-            else {
-                addWordToDatabase(wordTarget, wordExplain);
-                System.out.println("da them");
-                Alert alert = new Alert(Alert.AlertType.NONE);
-                alert.setContentText("Added word successfully");
-                alert.setTitle("Information");
-                alert.show();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setContentText("Added word successfully");
+            alert.setHeaderText("Done");
+            alert.show();
 
-                textFieldWordTarget.setText("");
-                htmlEditorWordExplain.setHtmlText("");
-            }
+            textFieldWordTarget.setText("");
+            htmlEditorWordExplain.setHtmlText("");
         }
         else
         {
-            System.out.println(htmlEditorWordExplain.getHtmlText());
-            Alert alert1 = new Alert(Alert.AlertType.NONE);
-            alert1.setTitle("Error");
-            alert1.setContentText("This word is in Dictionary!");
+
+            Alert alert1 = new Alert(Alert.AlertType.WARNING);
+            alert1.setTitle("Warning");
+            alert1.setContentText("This word is already in Dictionary!");
             alert1.show();
 
             textFieldWordTarget.setText("");
             htmlEditorWordExplain.setHtmlText("");
-
-            System.out.println("K tim thay");
 
         }
     }

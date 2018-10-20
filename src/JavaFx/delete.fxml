@@ -8,19 +8,19 @@
 
 <AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #3064B7;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.deleteController">
    <children>
-      <Button layoutX="220.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleButtonAction1" text="Delete">
+      <Button layoutX="226.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleButtonActionDelete" text="Delete">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TextField fx:id="textFieldXoa" layoutX="163.0" layoutY="113.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <Label alignment="CENTER" layoutX="137.0" layoutY="70.0" text="Enter word which you want to delete" textFill="#fcfcfc">
+      <TextField fx:id="textFieldXoa" layoutX="148.0" layoutY="113.0" onKeyPressed="#keyPress" prefHeight="37.0" prefWidth="215.0" style="-fx-border-color: blue;">
          <font>
             <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="112.0" layoutY="70.0" text="Enter word which you want to delete" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
    </children>

@@ -51,8 +51,7 @@ public class controllerFx implements Initializable {
             alert.getButtonTypes().addAll(buttonTypeYesAPI,buttonTypeNoAPI);
 
             alert.setTitle("Information");
-            alert.setContentText("Not found this word\n\nDo you want to use API google to search new word?");
-            alert.setHeaderText("Notification");
+            alert.setContentText("Not found this word\n\nDo you want to use API google for the word?");
 
             Optional<ButtonType> result = alert.showAndWait();
 
@@ -71,7 +70,6 @@ public class controllerFx implements Initializable {
                     break;
                 }
             }
-
         }
         else
         {
