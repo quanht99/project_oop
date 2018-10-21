@@ -24,7 +24,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <HTMLEditor fx:id="htmlEditorWordExplain" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="-2.0" layoutY="102.0" prefHeight="360.0" prefWidth="706.0" />
+      <HTMLEditor fx:id="htmlEditorWordExplain" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="102.0" prefHeight="360.0" prefWidth="693.0" />
       <Button alignment="CENTER" layoutX="611.0" layoutY="469.0" mnemonicParsing="false" onAction="#handleButtonActionOk" prefHeight="37.0" prefWidth="79.0" text="Save">
          <font>
             <Font size="16.0" />
