@@ -58,7 +58,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Menu">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#handleButtonActionAPI" text="API google" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleButtonActionAPI" text="Google translate" />
               <MenuItem mnemonicParsing="false" onAction="#handleButtonActionExit" text="Close">
                      <accelerator>
                         <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />

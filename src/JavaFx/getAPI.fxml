@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3064B7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.getAPIController">
    <children>
@@ -17,17 +21,17 @@
             <Font size="16.0" />
          </font>
       </TextField>
-      <TextArea fx:id="textAreaGetWordOutput" layoutY="111.0" prefHeight="289.0" prefWidth="602.0" style="-fx-border-color: blue;">
+      <TextArea fx:id="textAreaGetWordOutput" layoutY="111.0" prefHeight="289.0" prefWidth="600.0" style="-fx-border-color: blue;" wrapText="true">
          <font>
             <Font size="16.0" />
          </font>
       </TextArea>
-      <Label fx:id="label1" layoutX="8.0" layoutY="18.0" text="Vietnamese" textFill="#f2ecec">
+      <Label fx:id="label1" alignment="CENTER" layoutX="8.0" layoutY="18.0" text="Vietnamese" textFill="#f2ecec">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="label2" layoutX="167.0" layoutY="18.0" text="English" textFill="#f5f3f3">
+      <Label fx:id="label2" layoutX="167.0" layoutY="18.0" prefHeight="25.0" prefWidth="88.0" text="English" textFill="#f5f3f3">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

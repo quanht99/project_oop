@@ -22,7 +22,7 @@ public class getAPIController {
     @FXML
     public Label label2 = new Label();
     @FXML
-    private TextArea textAreaGetWordOutput;
+    private TextArea textAreaGetWordOutput ;
     @FXML
     private TextField textFieldGetWordInput;
 
@@ -49,12 +49,16 @@ public class getAPIController {
             textAreaGetWordOutput.setText(text4);
 
             /* add new word to database*/
-            String text5 = findWord(text4);
-            if(text5.equals("") && !text3.equals(text4))
-            {
-                addWordToDatabase(text4, text3);
+            int numberWord = demTu(text4);
 
-                System.out.println("done");
+            if(numberWord == 1)
+            {
+                String text5 = findWord(text4);
+                if(text5.equals("") && !text3.equals(text4))
+                {
+                    addWordToDatabase(text4, text3);
+                    System.out.println("done");
+                }
             }
         }
         else
@@ -65,12 +69,16 @@ public class getAPIController {
 
 
             /* add new word to database*/
-            String text5 = findWord(text3);
-            if(text5.equals("") && !text3.equals(text4))
-            {
-                addWordToDatabase(text3, text4);
+            int numberWord = demTu(text3);
 
-                System.out.println("done");
+            if(numberWord == 1)
+            {
+                String text5 = findWord(text3);
+                if(text5.equals("") && !text3.equals(text4))
+                {
+                    addWordToDatabase(text3, text4);
+                    System.out.println("done");
+                }
             }
         }
 
@@ -83,4 +91,19 @@ public class getAPIController {
         }
 
     }
+
+    /* separated word to database*/
+    public static int demTu(String str) {
+        int dem = 1;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' ' && str.charAt(i + 1) != ' ') {
+                dem++;
+            }
+        }
+        return dem;
+    }
+
+
+
+
 }

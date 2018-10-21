@@ -9,22 +9,22 @@
 
 <AnchorPane prefHeight="520.0" prefWidth="700.0" style="-fx-background-color: #3064B7;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.addNewWordController">
    <children>
-      <TextField fx:id="textFieldWordTarget" layoutX="107.0" layoutY="17.0" prefHeight="39.0" prefWidth="258.0" style="-fx-border-color: blue;">
+      <TextField fx:id="textFieldWordTarget" layoutX="119.0" layoutY="17.0" prefHeight="39.0" prefWidth="258.0" style="-fx-border-color: blue;">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
-      <Label layoutX="7.0" layoutY="24.0" text="Word Target" textFill="#fffdfd">
+      <Label layoutX="6.0" layoutY="24.0" text="Word Target" textFill="#fffdfd">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="5.0" layoutY="63.0" text="Word Explain" textFill="WHITE">
+      <Label layoutX="6.0" layoutY="65.0" text="Word Explain" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <HTMLEditor fx:id="htmlEditorWordExplain" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="-2.0" layoutY="102.0" prefHeight="360.0" prefWidth="706.0" style="-fx-background-color: blue;" />
+      <HTMLEditor fx:id="htmlEditorWordExplain" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="-2.0" layoutY="102.0" prefHeight="360.0" prefWidth="706.0" />
       <Button alignment="CENTER" layoutX="611.0" layoutY="469.0" mnemonicParsing="false" onAction="#handleButtonActionOk" prefHeight="37.0" prefWidth="79.0" text="Save">
          <font>
             <Font size="16.0" />
