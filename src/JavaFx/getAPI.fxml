@@ -18,7 +18,7 @@
       </TextField>
       <TextArea fx:id="textAreaGetWordOutput" layoutY="111.0" prefHeight="289.0" prefWidth="592.0" style="-fx-border-color: blue;" wrapText="true">
          <font>
-            <Font size="16.0" />
+            <Font name="Times New Roman" size="18.0" />
          </font>
       </TextArea>
       <Label fx:id="label1" alignment="CENTER" layoutX="8.0" layoutY="18.0" text="Vietnamese" textFill="#f2ecec">

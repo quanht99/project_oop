@@ -89,7 +89,6 @@ public class getAPIController {
         {
             handleButtonActionSearchAPI();
         }
-
     }
 
     /* separated word to database*/

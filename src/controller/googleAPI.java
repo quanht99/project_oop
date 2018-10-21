@@ -15,9 +15,7 @@ public class googleAPI {
         if (word.length() < 1) {
             return "";
         }
-        System.out.println(word);
         String text = word.replace(" ", "%20");
-        System.out.println(text);
         StringBuilder content = new StringBuilder();
         try {
             String urlText = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + langFrom
