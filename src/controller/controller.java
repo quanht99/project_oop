@@ -172,9 +172,7 @@ public class controller {
             synthesizer.allocate();
             synthesizer.resume();
             synthesizer.speakPlainText(text, null);
-
         }
-
         catch (Exception e)
         {
             e.printStackTrace();
