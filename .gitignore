@@ -105,4 +105,6 @@ META-INF/
 out/
 src/dictionaryE_V.db
 src/project_oop.jar
+dictionaryE_V.db
+project_oop.jar
 

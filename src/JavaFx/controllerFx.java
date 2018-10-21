@@ -104,7 +104,6 @@ public class controllerFx implements Initializable {
         word = suggestionWord(input);
         ObservableList<String> data = FXCollections.observableArrayList(word);
         listView.setItems(data);
-
     }
 
     public void KeyPress(KeyEvent e) throws SQLException {
@@ -206,9 +205,6 @@ public class controllerFx implements Initializable {
     public void handleButtonActionListen()
     {
         String textListen = labelOutput.getText();
-        System.out.println("ok");
-        System.out.println(textListen);
-
         textToSpeech(textListen);
     }
 
