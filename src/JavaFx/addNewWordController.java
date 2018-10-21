@@ -29,30 +29,43 @@ public class addNewWordController {
         String wordExplain = htmlEditorWordExplain.getHtmlText();
 
         String wordExplainOuput = findWord(wordTarget);
-        if(wordExplainOuput.equals("")) {
 
-            addWordToDatabase(wordTarget, wordExplain);
+        if(!wordTarget.equals("") && !wordExplain.equals("") ) // cai thu 2 nay laf html k chay dc
+        {
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Information");
-            alert.setContentText("Added word successfully");
-            alert.setHeaderText("Done");
-            alert.show();
+            if (wordExplainOuput.equals("") ) {
 
-            textFieldWordTarget.setText("");
-            htmlEditorWordExplain.setHtmlText("");
+                addWordToDatabase(wordTarget, wordExplain);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Information");
+                alert.setContentText("Added word successfully");
+                alert.setHeaderText("Done");
+                alert.show();
+
+                textFieldWordTarget.setText("");
+                htmlEditorWordExplain.setHtmlText("");
+            } else {
+
+                Alert alert1 = new Alert(Alert.AlertType.WARNING);
+                alert1.setTitle("Warning");
+                alert1.setContentText("This word is already in Dictionary!");
+                alert1.show();
+
+                textFieldWordTarget.setText("");
+                htmlEditorWordExplain.setHtmlText("");
+
+            }
         }
         else
         {
-
             Alert alert1 = new Alert(Alert.AlertType.WARNING);
             alert1.setTitle("Warning");
-            alert1.setContentText("This word is already in Dictionary!");
+            alert1.setContentText("You must enter the full word target and word explain!");
             alert1.show();
 
             textFieldWordTarget.setText("");
             htmlEditorWordExplain.setHtmlText("");
-
         }
     }
 

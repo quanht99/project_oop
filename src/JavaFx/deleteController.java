@@ -25,7 +25,15 @@ public class deleteController {
         String textEqualInput = textFieldXoa.getText();
         String textEqualOutput = findWord(textEqualInput);
 
-        if(textEqualOutput.equals("") || textEqualInput.equals(""))
+        if(textEqualInput.equals(""))
+        {
+            Alert alert1 = new Alert(Alert.AlertType.WARNING);
+            alert1.setTitle("Warning");
+            alert1.setHeaderText("WARNING");
+            alert1.setContentText("You must enter the full word target!");
+            alert1.show();
+        }
+        else if(textEqualOutput.equals(""))
         {
             Alert alert1 = new Alert(Alert.AlertType.ERROR);
             alert1.setTitle("Error");

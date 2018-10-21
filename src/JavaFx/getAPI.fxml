@@ -12,27 +12,27 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3064B7;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JavaFx.getAPIController">
    <children>
-      <TextField fx:id="textFieldGetWordInput" layoutX="3.0" layoutY="59.0" onKeyPressed="#KeyPress" prefHeight="41.0" prefWidth="312.0" style="-fx-border-color: blue;">
+      <TextField fx:id="textFieldGetWordInput" layoutY="59.0" onKeyPressed="#KeyPress" prefHeight="41.0" prefWidth="315.0" promptText="Search" style="-fx-border-color: blue;">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font>
       </TextField>
       <TextArea fx:id="textAreaGetWordOutput" layoutY="111.0" prefHeight="289.0" prefWidth="602.0" style="-fx-border-color: blue;">
          <font>
-            <Font size="14.0" />
+            <Font size="16.0" />
          </font>
       </TextArea>
-      <Label fx:id="label1" layoutX="3.0" layoutY="18.0" text="Tiếng Việt" textFill="#f2ecec">
+      <Label fx:id="label1" layoutX="8.0" layoutY="18.0" text="Vietnamese" textFill="#f2ecec">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="label2" layoutX="151.0" layoutY="18.0" text="Tiếng Anh" textFill="#f5f3f3">
+      <Label fx:id="label2" layoutX="167.0" layoutY="18.0" text="English" textFill="#f5f3f3">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="91.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleButtonActionChange" prefHeight="37.0" prefWidth="51.0">
+      <Button layoutX="107.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleButtonActionChange" prefHeight="37.0" prefWidth="51.0">
          <font>
             <Font size="16.0" />
          </font>
@@ -53,5 +53,10 @@
             </ImageView>
          </graphic>
       </Button>
+      <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="554.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@microphone.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

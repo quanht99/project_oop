@@ -12,6 +12,8 @@ import org.json.JSONException;
 import java.awt.*;
 import java.sql.SQLException;
 
+import static controller.controller.addWordToDatabase;
+import static controller.controller.findWord;
 import static controller.googleAPI.getAPI;
 
 public class getAPIController {
@@ -35,22 +37,41 @@ public class getAPIController {
 
     }
     @FXML
-    public void handleButtonActionSearchAPI() throws JSONException {
+    public void handleButtonActionSearchAPI() throws JSONException, SQLException {
         String text1 = label1.getText();
         String text2 = label2.getText();
 
 
-        if(text1.equals("Tiếng Việt") && text2.equals("Tiếng Anh"))
+        if(text1.equals("Vietnamese") && text2.equals("English"))
         {
             String text3 = textFieldGetWordInput.getText();
             String text4 = getAPI("vi", "en", text3);
             textAreaGetWordOutput.setText(text4);
+
+            /* add new word to database*/
+            String text5 = findWord(text4);
+            if(text5.equals("") && !text3.equals(text4))
+            {
+                addWordToDatabase(text4, text3);
+
+                System.out.println("done");
+            }
         }
         else
         {
             String text3 = textFieldGetWordInput.getText();
             String text4 = getAPI("en", "vi", text3);
             textAreaGetWordOutput.setText(text4);
+
+
+            /* add new word to database*/
+            String text5 = findWord(text3);
+            if(text5.equals("") && !text3.equals(text4))
+            {
+                addWordToDatabase(text3, text4);
+
+                System.out.println("done");
+            }
         }
 
     }

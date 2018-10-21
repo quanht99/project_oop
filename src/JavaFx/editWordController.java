@@ -29,7 +29,7 @@ public class editWordController {
         String textFindInput = textFieldEdit.getText();
         String textFindOutput = findWord(textFindInput);
 
-        if(textFindOutput.equals("") || textFindInput.equals(""))
+        if(textFindOutput.equals(""))
         {
             Alert alert1 = new Alert(Alert.AlertType.ERROR);
             alert1.setTitle("Error");
@@ -44,17 +44,27 @@ public class editWordController {
     @FXML
     public void handleButtonEdit(ActionEvent e) throws SQLException {
 
+        if(!textFieldEdit.getText().equals("")) //them htmleditor de kiem tra word mean chua nhap
+        {
+            editDetail(textFieldEdit.getText(), htmlEditorEdit.getHtmlText());
 
-        editDetail(textFieldEdit.getText(), htmlEditorEdit.getHtmlText());
+            textFieldEdit.setText("");
+            htmlEditorEdit.setHtmlText("");
 
-        textFieldEdit.setText("");
-        htmlEditorEdit.setHtmlText("");
-
-        Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
-        alert3.setTitle("Information");
-        alert3.setHeaderText("Done");
-        alert3.setContentText("Edited word successfully");
-        alert3.show();
+            Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+            alert3.setTitle("Information");
+            alert3.setHeaderText("Done");
+            alert3.setContentText("Edited word successfully");
+            alert3.show();
+        }
+        else
+        {
+            Alert alert1 = new Alert(Alert.AlertType.WARNING);
+            alert1.setTitle("Warning");
+            alert1.setHeaderText("Warning");
+            alert1.setContentText("You must enter the full word target and word explain!");
+            alert1.show();
+        }
 
     }
     @FXML
@@ -67,6 +77,3 @@ public class editWordController {
     }
 
 }
-/*neu k co gi thay doi thi thong bao
-k sua j maf luu ghi loi
- */

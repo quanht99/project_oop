@@ -43,32 +43,17 @@ public class controllerFx implements Initializable {
 
         if(wordExplain.equals(""))
         {
-            Alert alert = new Alert(Alert.AlertType.NONE);
-
-            ButtonType buttonTypeYesAPI = new ButtonType("Yes");
-            ButtonType buttonTypeNoAPI = new ButtonType("No");
-
-            alert.getButtonTypes().addAll(buttonTypeYesAPI,buttonTypeNoAPI);
-
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Information");
-            alert.setContentText("Not found this word\n\nDo you want to use API google for the word?");
+            alert.setHeaderText("Not found this word");
+            alert.setContentText("Do you want to use Google translate for the word?");
 
             Optional<ButtonType> result = alert.showAndWait();
 
-            alert.show();
-            switch (result.get().getText())
+            if(result.get().getText().equals("OK"))
             {
-                case "Yes":
-                {
-                    handleButtonActionAPI();
-                    alert.close();
-                    break;
-                }
-                case "No":
-                {
-                    alert.close();
-                    break;
-                }
+                handleButtonActionAPI();
+                alert.close();
             }
         }
         else
@@ -88,7 +73,7 @@ public class controllerFx implements Initializable {
             stageAdd.initStyle(StageStyle.UTILITY);
 
             stageAdd.hide();
-            stageAdd.setTitle("Search new word by API google");
+            stageAdd.setTitle("Google translate");
             stageAdd.setScene(new Scene(rootAPI));
             stageAdd.show();
         }
